@@ -23,7 +23,7 @@
     UIButton *plusButton = [[UIButton alloc] init];
     plusButton.bounds = CGRectMake(0, 0, 100, 100);
     plusButton.center = CGPointMake(160, 568 / 2);
-    // 设置背景
+    // 设置背景 test nihao
     [plusButton setBackgroundImage:[UIImage imageNamed:@"tabbar_compose_button"] forState:UIControlStateNormal];
     [plusButton setBackgroundImage:[UIImage imageNamed:@"tabbar_compose_button_highlighted"] forState:UIControlStateHighlighted];
     // 设置图标
