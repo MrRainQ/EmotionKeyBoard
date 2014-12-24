@@ -1,0 +1,723 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB56EB9F1A4822FB00F21DD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB56EB9E1A4822FB00F21DD9 /* Foundation.framework */; };
+		CB56EBA11A4822FB00F21DD9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB56EBA01A4822FB00F21DD9 /* CoreGraphics.framework */; };
+		CB56EBA31A4822FB00F21DD9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB56EBA21A4822FB00F21DD9 /* UIKit.framework */; };
+		CB56EBA91A4822FB00F21DD9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB56EBA71A4822FB00F21DD9 /* InfoPlist.strings */; };
+		CB56EBB71A4822FB00F21DD9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB56EBB61A4822FB00F21DD9 /* Images.xcassets */; };
+		CB56EBBE1A4822FB00F21DD9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB56EBBD1A4822FB00F21DD9 /* XCTest.framework */; };
+		CB56EBBF1A4822FB00F21DD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB56EB9E1A4822FB00F21DD9 /* Foundation.framework */; };
+		CB56EBC01A4822FB00F21DD9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB56EBA21A4822FB00F21DD9 /* UIKit.framework */; };
+		CB56EBC81A4822FB00F21DD9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB56EBC61A4822FB00F21DD9 /* InfoPlist.strings */; };
+		CB56EBCA1A4822FB00F21DD9 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EBC91A4822FB00F21DD9 /* ____Tests.m */; };
+		CB56EBD61A48232F00F21DD9 /* EmotionIcons in Resources */ = {isa = PBXBuildFile; fileRef = CB56EBD51A48232F00F21DD9 /* EmotionIcons */; };
+		CB56EC241A4823AF00F21DD9 /* HMComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EBDD1A4823AF00F21DD9 /* HMComposeViewController.m */; };
+		CB56EC251A4823AF00F21DD9 /* HMEmotion.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EBE01A4823AF00F21DD9 /* HMEmotion.m */; };
+		CB56EC261A4823AF00F21DD9 /* HMEmotionAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EBE21A4823AF00F21DD9 /* HMEmotionAttachment.m */; };
+		CB56EC271A4823AF00F21DD9 /* HMEmotionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EBE51A4823AF00F21DD9 /* HMEmotionTool.m */; };
+		CB56EC281A4823AF00F21DD9 /* HMEmotionGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EBE91A4823AF00F21DD9 /* HMEmotionGridView.m */; };
+		CB56EC291A4823AF00F21DD9 /* HMEmotionKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EBEB1A4823AF00F21DD9 /* HMEmotionKeyboard.m */; };
+		CB56EC2A1A4823AF00F21DD9 /* HMEmotionListView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EBED1A4823AF00F21DD9 /* HMEmotionListView.m */; };
+		CB56EC2B1A4823AF00F21DD9 /* HMEmotionPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EBEF1A4823AF00F21DD9 /* HMEmotionPopView.m */; };
+		CB56EC2C1A4823AF00F21DD9 /* HMEmotionPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB56EBF01A4823AF00F21DD9 /* HMEmotionPopView.xib */; };
+		CB56EC2D1A4823AF00F21DD9 /* HMEmotionTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EBF21A4823AF00F21DD9 /* HMEmotionTextView.m */; };
+		CB56EC2E1A4823AF00F21DD9 /* HMEmotionToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EBF41A4823AF00F21DD9 /* HMEmotionToolbar.m */; };
+		CB56EC2F1A4823AF00F21DD9 /* HMEmotionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EBF61A4823AF00F21DD9 /* HMEmotionView.m */; };
+		CB56EC301A4823AF00F21DD9 /* HMComposePhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EBF81A4823AF00F21DD9 /* HMComposePhotosView.m */; };
+		CB56EC311A4823AF00F21DD9 /* HMComposeToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EBFA1A4823AF00F21DD9 /* HMComposeToolbar.m */; };
+		CB56EC321A4823AF00F21DD9 /* HMTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EBFC1A4823AF00F21DD9 /* HMTextView.m */; };
+		CB56EC331A4823AF00F21DD9 /* NSString+Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EC001A4823AF00F21DD9 /* NSString+Emoji.m */; };
+		CB56EC341A4823AF00F21DD9 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EC021A4823AF00F21DD9 /* UIImage+Extension.m */; };
+		CB56EC351A4823AF00F21DD9 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EC041A4823AF00F21DD9 /* UIView+Extension.m */; };
+		CB56EC361A4823AF00F21DD9 /* HMMMMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EC061A4823AF00F21DD9 /* HMMMMViewController.m */; };
+		CB56EC381A4823AF00F21DD9 /* MJArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EC0C1A4823AF00F21DD9 /* MJArgument.m */; };
+		CB56EC391A4823AF00F21DD9 /* MJIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EC0F1A4823AF00F21DD9 /* MJIvar.m */; };
+		CB56EC3A1A4823AF00F21DD9 /* MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EC111A4823AF00F21DD9 /* MJMember.m */; };
+		CB56EC3B1A4823AF00F21DD9 /* MJMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EC131A4823AF00F21DD9 /* MJMethod.m */; };
+		CB56EC3C1A4823AF00F21DD9 /* MJType.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EC151A4823AF00F21DD9 /* MJType.m */; };
+		CB56EC3D1A4823AF00F21DD9 /* MJTypeEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EC171A4823AF00F21DD9 /* MJTypeEncoding.m */; };
+		CB56EC3E1A4823AF00F21DD9 /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EC191A4823AF00F21DD9 /* NSObject+MJCoding.m */; };
+		CB56EC3F1A4823AF00F21DD9 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EC1B1A4823AF00F21DD9 /* NSObject+MJKeyValue.m */; };
+		CB56EC401A4823AF00F21DD9 /* NSObject+MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EC1D1A4823AF00F21DD9 /* NSObject+MJMember.m */; };
+		CB56EC411A4823AF00F21DD9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EC221A4823AF00F21DD9 /* AppDelegate.m */; };
+		CB56EC421A4823AF00F21DD9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EC231A4823AF00F21DD9 /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CB56EBC11A4822FB00F21DD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB56EB931A4822FB00F21DD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB56EB9A1A4822FB00F21DD9;
+			remoteInfo = "表情键盘";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CB56EB9B1A4822FB00F21DD9 /* 表情键盘.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "表情键盘.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB56EB9E1A4822FB00F21DD9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CB56EBA01A4822FB00F21DD9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CB56EBA21A4822FB00F21DD9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CB56EBA61A4822FB00F21DD9 /* 表情键盘-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "表情键盘-Info.plist"; sourceTree = "<group>"; };
+		CB56EBA81A4822FB00F21DD9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CB56EBAC1A4822FB00F21DD9 /* 表情键盘-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "表情键盘-Prefix.pch"; sourceTree = "<group>"; };
+		CB56EBB61A4822FB00F21DD9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CB56EBBC1A4822FB00F21DD9 /* 表情键盘Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "表情键盘Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB56EBBD1A4822FB00F21DD9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		CB56EBC51A4822FB00F21DD9 /* 表情键盘Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "表情键盘Tests-Info.plist"; sourceTree = "<group>"; };
+		CB56EBC71A4822FB00F21DD9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CB56EBC91A4822FB00F21DD9 /* ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____Tests.m"; sourceTree = "<group>"; };
+		CB56EBD51A48232F00F21DD9 /* EmotionIcons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = EmotionIcons; sourceTree = "<group>"; };
+		CB56EBDC1A4823AF00F21DD9 /* HMComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMComposeViewController.h; sourceTree = "<group>"; };
+		CB56EBDD1A4823AF00F21DD9 /* HMComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMComposeViewController.m; sourceTree = "<group>"; };
+		CB56EBDF1A4823AF00F21DD9 /* HMEmotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMEmotion.h; sourceTree = "<group>"; };
+		CB56EBE01A4823AF00F21DD9 /* HMEmotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMEmotion.m; sourceTree = "<group>"; };
+		CB56EBE11A4823AF00F21DD9 /* HMEmotionAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMEmotionAttachment.h; sourceTree = "<group>"; };
+		CB56EBE21A4823AF00F21DD9 /* HMEmotionAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMEmotionAttachment.m; sourceTree = "<group>"; };
+		CB56EBE41A4823AF00F21DD9 /* HMEmotionTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMEmotionTool.h; sourceTree = "<group>"; };
+		CB56EBE51A4823AF00F21DD9 /* HMEmotionTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMEmotionTool.m; sourceTree = "<group>"; };
+		CB56EBE81A4823AF00F21DD9 /* HMEmotionGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMEmotionGridView.h; sourceTree = "<group>"; };
+		CB56EBE91A4823AF00F21DD9 /* HMEmotionGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMEmotionGridView.m; sourceTree = "<group>"; };
+		CB56EBEA1A4823AF00F21DD9 /* HMEmotionKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMEmotionKeyboard.h; sourceTree = "<group>"; };
+		CB56EBEB1A4823AF00F21DD9 /* HMEmotionKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMEmotionKeyboard.m; sourceTree = "<group>"; };
+		CB56EBEC1A4823AF00F21DD9 /* HMEmotionListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMEmotionListView.h; sourceTree = "<group>"; };
+		CB56EBED1A4823AF00F21DD9 /* HMEmotionListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMEmotionListView.m; sourceTree = "<group>"; };
+		CB56EBEE1A4823AF00F21DD9 /* HMEmotionPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMEmotionPopView.h; sourceTree = "<group>"; };
+		CB56EBEF1A4823AF00F21DD9 /* HMEmotionPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMEmotionPopView.m; sourceTree = "<group>"; };
+		CB56EBF01A4823AF00F21DD9 /* HMEmotionPopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMEmotionPopView.xib; sourceTree = "<group>"; };
+		CB56EBF11A4823AF00F21DD9 /* HMEmotionTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMEmotionTextView.h; sourceTree = "<group>"; };
+		CB56EBF21A4823AF00F21DD9 /* HMEmotionTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMEmotionTextView.m; sourceTree = "<group>"; };
+		CB56EBF31A4823AF00F21DD9 /* HMEmotionToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMEmotionToolbar.h; sourceTree = "<group>"; };
+		CB56EBF41A4823AF00F21DD9 /* HMEmotionToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMEmotionToolbar.m; sourceTree = "<group>"; };
+		CB56EBF51A4823AF00F21DD9 /* HMEmotionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMEmotionView.h; sourceTree = "<group>"; };
+		CB56EBF61A4823AF00F21DD9 /* HMEmotionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMEmotionView.m; sourceTree = "<group>"; };
+		CB56EBF71A4823AF00F21DD9 /* HMComposePhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMComposePhotosView.h; sourceTree = "<group>"; };
+		CB56EBF81A4823AF00F21DD9 /* HMComposePhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMComposePhotosView.m; sourceTree = "<group>"; };
+		CB56EBF91A4823AF00F21DD9 /* HMComposeToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMComposeToolbar.h; sourceTree = "<group>"; };
+		CB56EBFA1A4823AF00F21DD9 /* HMComposeToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMComposeToolbar.m; sourceTree = "<group>"; };
+		CB56EBFB1A4823AF00F21DD9 /* HMTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMTextView.h; sourceTree = "<group>"; };
+		CB56EBFC1A4823AF00F21DD9 /* HMTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMTextView.m; sourceTree = "<group>"; };
+		CB56EBFF1A4823AF00F21DD9 /* NSString+Emoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Emoji.h"; sourceTree = "<group>"; };
+		CB56EC001A4823AF00F21DD9 /* NSString+Emoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Emoji.m"; sourceTree = "<group>"; };
+		CB56EC011A4823AF00F21DD9 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		CB56EC021A4823AF00F21DD9 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		CB56EC031A4823AF00F21DD9 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		CB56EC041A4823AF00F21DD9 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		CB56EC051A4823AF00F21DD9 /* HMMMMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMMMMViewController.h; sourceTree = "<group>"; };
+		CB56EC061A4823AF00F21DD9 /* HMMMMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMMMMViewController.m; sourceTree = "<group>"; };
+		CB56EC0B1A4823AF00F21DD9 /* MJArgument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJArgument.h; sourceTree = "<group>"; };
+		CB56EC0C1A4823AF00F21DD9 /* MJArgument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJArgument.m; sourceTree = "<group>"; };
+		CB56EC0D1A4823AF00F21DD9 /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
+		CB56EC0E1A4823AF00F21DD9 /* MJIvar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJIvar.h; sourceTree = "<group>"; };
+		CB56EC0F1A4823AF00F21DD9 /* MJIvar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJIvar.m; sourceTree = "<group>"; };
+		CB56EC101A4823AF00F21DD9 /* MJMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJMember.h; sourceTree = "<group>"; };
+		CB56EC111A4823AF00F21DD9 /* MJMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJMember.m; sourceTree = "<group>"; };
+		CB56EC121A4823AF00F21DD9 /* MJMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJMethod.h; sourceTree = "<group>"; };
+		CB56EC131A4823AF00F21DD9 /* MJMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJMethod.m; sourceTree = "<group>"; };
+		CB56EC141A4823AF00F21DD9 /* MJType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJType.h; sourceTree = "<group>"; };
+		CB56EC151A4823AF00F21DD9 /* MJType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJType.m; sourceTree = "<group>"; };
+		CB56EC161A4823AF00F21DD9 /* MJTypeEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJTypeEncoding.h; sourceTree = "<group>"; };
+		CB56EC171A4823AF00F21DD9 /* MJTypeEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJTypeEncoding.m; sourceTree = "<group>"; };
+		CB56EC181A4823AF00F21DD9 /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		CB56EC191A4823AF00F21DD9 /* NSObject+MJCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		CB56EC1A1A4823AF00F21DD9 /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		CB56EC1B1A4823AF00F21DD9 /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
+		CB56EC1C1A4823AF00F21DD9 /* NSObject+MJMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJMember.h"; sourceTree = "<group>"; };
+		CB56EC1D1A4823AF00F21DD9 /* NSObject+MJMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJMember.m"; sourceTree = "<group>"; };
+		CB56EC211A4823AF00F21DD9 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CB56EC221A4823AF00F21DD9 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CB56EC231A4823AF00F21DD9 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB56EB981A4822FB00F21DD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB56EBA11A4822FB00F21DD9 /* CoreGraphics.framework in Frameworks */,
+				CB56EBA31A4822FB00F21DD9 /* UIKit.framework in Frameworks */,
+				CB56EB9F1A4822FB00F21DD9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB56EBB91A4822FB00F21DD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB56EBBE1A4822FB00F21DD9 /* XCTest.framework in Frameworks */,
+				CB56EBC01A4822FB00F21DD9 /* UIKit.framework in Frameworks */,
+				CB56EBBF1A4822FB00F21DD9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB56EB921A4822FB00F21DD9 = {
+			isa = PBXGroup;
+			children = (
+				CB56EBA41A4822FB00F21DD9 /* 表情键盘 */,
+				CB56EBC31A4822FB00F21DD9 /* 表情键盘Tests */,
+				CB56EB9D1A4822FB00F21DD9 /* Frameworks */,
+				CB56EB9C1A4822FB00F21DD9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB56EB9C1A4822FB00F21DD9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB56EB9B1A4822FB00F21DD9 /* 表情键盘.app */,
+				CB56EBBC1A4822FB00F21DD9 /* 表情键盘Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB56EB9D1A4822FB00F21DD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB56EB9E1A4822FB00F21DD9 /* Foundation.framework */,
+				CB56EBA01A4822FB00F21DD9 /* CoreGraphics.framework */,
+				CB56EBA21A4822FB00F21DD9 /* UIKit.framework */,
+				CB56EBBD1A4822FB00F21DD9 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB56EBA41A4822FB00F21DD9 /* 表情键盘 */ = {
+			isa = PBXGroup;
+			children = (
+				CB56EBD91A4823AF00F21DD9 /* Classes */,
+				CB56EBB61A4822FB00F21DD9 /* Images.xcassets */,
+				CB56EBA51A4822FB00F21DD9 /* Supporting Files */,
+			);
+			path = "表情键盘";
+			sourceTree = "<group>";
+		};
+		CB56EBA51A4822FB00F21DD9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB56EBD51A48232F00F21DD9 /* EmotionIcons */,
+				CB56EBA61A4822FB00F21DD9 /* 表情键盘-Info.plist */,
+				CB56EBA71A4822FB00F21DD9 /* InfoPlist.strings */,
+				CB56EBAC1A4822FB00F21DD9 /* 表情键盘-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB56EBC31A4822FB00F21DD9 /* 表情键盘Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CB56EBC91A4822FB00F21DD9 /* ____Tests.m */,
+				CB56EBC41A4822FB00F21DD9 /* Supporting Files */,
+			);
+			path = "表情键盘Tests";
+			sourceTree = "<group>";
+		};
+		CB56EBC41A4822FB00F21DD9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB56EBC51A4822FB00F21DD9 /* 表情键盘Tests-Info.plist */,
+				CB56EBC61A4822FB00F21DD9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB56EBD91A4823AF00F21DD9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CB56EBDA1A4823AF00F21DD9 /* Compose */,
+				CB56EBFD1A4823AF00F21DD9 /* Main */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CB56EBDA1A4823AF00F21DD9 /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				CB56EBDB1A4823AF00F21DD9 /* Controller */,
+				CB56EBDE1A4823AF00F21DD9 /* Model */,
+				CB56EBE31A4823AF00F21DD9 /* Tool */,
+				CB56EBE61A4823AF00F21DD9 /* View */,
+			);
+			name = Compose;
+			path = "Compose(发微博)";
+			sourceTree = "<group>";
+		};
+		CB56EBDB1A4823AF00F21DD9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CB56EBDC1A4823AF00F21DD9 /* HMComposeViewController.h */,
+				CB56EBDD1A4823AF00F21DD9 /* HMComposeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CB56EBDE1A4823AF00F21DD9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CB56EBDF1A4823AF00F21DD9 /* HMEmotion.h */,
+				CB56EBE01A4823AF00F21DD9 /* HMEmotion.m */,
+				CB56EBE11A4823AF00F21DD9 /* HMEmotionAttachment.h */,
+				CB56EBE21A4823AF00F21DD9 /* HMEmotionAttachment.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CB56EBE31A4823AF00F21DD9 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				CB56EBE41A4823AF00F21DD9 /* HMEmotionTool.h */,
+				CB56EBE51A4823AF00F21DD9 /* HMEmotionTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		CB56EBE61A4823AF00F21DD9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB56EBE71A4823AF00F21DD9 /* EmotionKeyboard */,
+				CB56EBF71A4823AF00F21DD9 /* HMComposePhotosView.h */,
+				CB56EBF81A4823AF00F21DD9 /* HMComposePhotosView.m */,
+				CB56EBF91A4823AF00F21DD9 /* HMComposeToolbar.h */,
+				CB56EBFA1A4823AF00F21DD9 /* HMComposeToolbar.m */,
+				CB56EBFB1A4823AF00F21DD9 /* HMTextView.h */,
+				CB56EBFC1A4823AF00F21DD9 /* HMTextView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CB56EBE71A4823AF00F21DD9 /* EmotionKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				CB56EBE81A4823AF00F21DD9 /* HMEmotionGridView.h */,
+				CB56EBE91A4823AF00F21DD9 /* HMEmotionGridView.m */,
+				CB56EBEA1A4823AF00F21DD9 /* HMEmotionKeyboard.h */,
+				CB56EBEB1A4823AF00F21DD9 /* HMEmotionKeyboard.m */,
+				CB56EBEC1A4823AF00F21DD9 /* HMEmotionListView.h */,
+				CB56EBED1A4823AF00F21DD9 /* HMEmotionListView.m */,
+				CB56EBEE1A4823AF00F21DD9 /* HMEmotionPopView.h */,
+				CB56EBEF1A4823AF00F21DD9 /* HMEmotionPopView.m */,
+				CB56EBF01A4823AF00F21DD9 /* HMEmotionPopView.xib */,
+				CB56EBF11A4823AF00F21DD9 /* HMEmotionTextView.h */,
+				CB56EBF21A4823AF00F21DD9 /* HMEmotionTextView.m */,
+				CB56EBF31A4823AF00F21DD9 /* HMEmotionToolbar.h */,
+				CB56EBF41A4823AF00F21DD9 /* HMEmotionToolbar.m */,
+				CB56EBF51A4823AF00F21DD9 /* HMEmotionView.h */,
+				CB56EBF61A4823AF00F21DD9 /* HMEmotionView.m */,
+			);
+			path = EmotionKeyboard;
+			sourceTree = "<group>";
+		};
+		CB56EBFD1A4823AF00F21DD9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CB56EBFE1A4823AF00F21DD9 /* Category */,
+				CB56EC051A4823AF00F21DD9 /* HMMMMViewController.h */,
+				CB56EC061A4823AF00F21DD9 /* HMMMMViewController.m */,
+				CB56EC071A4823AF00F21DD9 /* Lib */,
+				CB56EC201A4823AF00F21DD9 /* Other */,
+			);
+			name = Main;
+			path = "Main(主要)";
+			sourceTree = "<group>";
+		};
+		CB56EBFE1A4823AF00F21DD9 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				CB56EBFF1A4823AF00F21DD9 /* NSString+Emoji.h */,
+				CB56EC001A4823AF00F21DD9 /* NSString+Emoji.m */,
+				CB56EC011A4823AF00F21DD9 /* UIImage+Extension.h */,
+				CB56EC021A4823AF00F21DD9 /* UIImage+Extension.m */,
+				CB56EC031A4823AF00F21DD9 /* UIView+Extension.h */,
+				CB56EC041A4823AF00F21DD9 /* UIView+Extension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		CB56EC071A4823AF00F21DD9 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				CB56EC0A1A4823AF00F21DD9 /* MJExtension */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		CB56EC0A1A4823AF00F21DD9 /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				CB56EC0B1A4823AF00F21DD9 /* MJArgument.h */,
+				CB56EC0C1A4823AF00F21DD9 /* MJArgument.m */,
+				CB56EC0D1A4823AF00F21DD9 /* MJExtension.h */,
+				CB56EC0E1A4823AF00F21DD9 /* MJIvar.h */,
+				CB56EC0F1A4823AF00F21DD9 /* MJIvar.m */,
+				CB56EC101A4823AF00F21DD9 /* MJMember.h */,
+				CB56EC111A4823AF00F21DD9 /* MJMember.m */,
+				CB56EC121A4823AF00F21DD9 /* MJMethod.h */,
+				CB56EC131A4823AF00F21DD9 /* MJMethod.m */,
+				CB56EC141A4823AF00F21DD9 /* MJType.h */,
+				CB56EC151A4823AF00F21DD9 /* MJType.m */,
+				CB56EC161A4823AF00F21DD9 /* MJTypeEncoding.h */,
+				CB56EC171A4823AF00F21DD9 /* MJTypeEncoding.m */,
+				CB56EC181A4823AF00F21DD9 /* NSObject+MJCoding.h */,
+				CB56EC191A4823AF00F21DD9 /* NSObject+MJCoding.m */,
+				CB56EC1A1A4823AF00F21DD9 /* NSObject+MJKeyValue.h */,
+				CB56EC1B1A4823AF00F21DD9 /* NSObject+MJKeyValue.m */,
+				CB56EC1C1A4823AF00F21DD9 /* NSObject+MJMember.h */,
+				CB56EC1D1A4823AF00F21DD9 /* NSObject+MJMember.m */,
+			);
+			path = MJExtension;
+			sourceTree = "<group>";
+		};
+		CB56EC201A4823AF00F21DD9 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				CB56EC211A4823AF00F21DD9 /* AppDelegate.h */,
+				CB56EC221A4823AF00F21DD9 /* AppDelegate.m */,
+				CB56EC231A4823AF00F21DD9 /* main.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB56EB9A1A4822FB00F21DD9 /* 表情键盘 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB56EBCD1A4822FB00F21DD9 /* Build configuration list for PBXNativeTarget "表情键盘" */;
+			buildPhases = (
+				CB56EB971A4822FB00F21DD9 /* Sources */,
+				CB56EB981A4822FB00F21DD9 /* Frameworks */,
+				CB56EB991A4822FB00F21DD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "表情键盘";
+			productName = "表情键盘";
+			productReference = CB56EB9B1A4822FB00F21DD9 /* 表情键盘.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CB56EBBB1A4822FB00F21DD9 /* 表情键盘Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB56EBD01A4822FB00F21DD9 /* Build configuration list for PBXNativeTarget "表情键盘Tests" */;
+			buildPhases = (
+				CB56EBB81A4822FB00F21DD9 /* Sources */,
+				CB56EBB91A4822FB00F21DD9 /* Frameworks */,
+				CB56EBBA1A4822FB00F21DD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB56EBC21A4822FB00F21DD9 /* PBXTargetDependency */,
+			);
+			name = "表情键盘Tests";
+			productName = "表情键盘Tests";
+			productReference = CB56EBBC1A4822FB00F21DD9 /* 表情键盘Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB56EB931A4822FB00F21DD9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = sen5labs;
+				TargetAttributes = {
+					CB56EBBB1A4822FB00F21DD9 = {
+						TestTargetID = CB56EB9A1A4822FB00F21DD9;
+					};
+				};
+			};
+			buildConfigurationList = CB56EB961A4822FB00F21DD9 /* Build configuration list for PBXProject "表情键盘" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB56EB921A4822FB00F21DD9;
+			productRefGroup = CB56EB9C1A4822FB00F21DD9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB56EB9A1A4822FB00F21DD9 /* 表情键盘 */,
+				CB56EBBB1A4822FB00F21DD9 /* 表情键盘Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB56EB991A4822FB00F21DD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB56EBD61A48232F00F21DD9 /* EmotionIcons in Resources */,
+				CB56EBB71A4822FB00F21DD9 /* Images.xcassets in Resources */,
+				CB56EBA91A4822FB00F21DD9 /* InfoPlist.strings in Resources */,
+				CB56EC2C1A4823AF00F21DD9 /* HMEmotionPopView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB56EBBA1A4822FB00F21DD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB56EBC81A4822FB00F21DD9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB56EB971A4822FB00F21DD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB56EC361A4823AF00F21DD9 /* HMMMMViewController.m in Sources */,
+				CB56EC381A4823AF00F21DD9 /* MJArgument.m in Sources */,
+				CB56EC351A4823AF00F21DD9 /* UIView+Extension.m in Sources */,
+				CB56EC241A4823AF00F21DD9 /* HMComposeViewController.m in Sources */,
+				CB56EC411A4823AF00F21DD9 /* AppDelegate.m in Sources */,
+				CB56EC3C1A4823AF00F21DD9 /* MJType.m in Sources */,
+				CB56EC3D1A4823AF00F21DD9 /* MJTypeEncoding.m in Sources */,
+				CB56EC2F1A4823AF00F21DD9 /* HMEmotionView.m in Sources */,
+				CB56EC341A4823AF00F21DD9 /* UIImage+Extension.m in Sources */,
+				CB56EC331A4823AF00F21DD9 /* NSString+Emoji.m in Sources */,
+				CB56EC421A4823AF00F21DD9 /* main.m in Sources */,
+				CB56EC261A4823AF00F21DD9 /* HMEmotionAttachment.m in Sources */,
+				CB56EC3B1A4823AF00F21DD9 /* MJMethod.m in Sources */,
+				CB56EC311A4823AF00F21DD9 /* HMComposeToolbar.m in Sources */,
+				CB56EC391A4823AF00F21DD9 /* MJIvar.m in Sources */,
+				CB56EC3F1A4823AF00F21DD9 /* NSObject+MJKeyValue.m in Sources */,
+				CB56EC281A4823AF00F21DD9 /* HMEmotionGridView.m in Sources */,
+				CB56EC2E1A4823AF00F21DD9 /* HMEmotionToolbar.m in Sources */,
+				CB56EC2D1A4823AF00F21DD9 /* HMEmotionTextView.m in Sources */,
+				CB56EC2B1A4823AF00F21DD9 /* HMEmotionPopView.m in Sources */,
+				CB56EC291A4823AF00F21DD9 /* HMEmotionKeyboard.m in Sources */,
+				CB56EC401A4823AF00F21DD9 /* NSObject+MJMember.m in Sources */,
+				CB56EC3A1A4823AF00F21DD9 /* MJMember.m in Sources */,
+				CB56EC3E1A4823AF00F21DD9 /* NSObject+MJCoding.m in Sources */,
+				CB56EC2A1A4823AF00F21DD9 /* HMEmotionListView.m in Sources */,
+				CB56EC271A4823AF00F21DD9 /* HMEmotionTool.m in Sources */,
+				CB56EC251A4823AF00F21DD9 /* HMEmotion.m in Sources */,
+				CB56EC301A4823AF00F21DD9 /* HMComposePhotosView.m in Sources */,
+				CB56EC321A4823AF00F21DD9 /* HMTextView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB56EBB81A4822FB00F21DD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB56EBCA1A4822FB00F21DD9 /* ____Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CB56EBC21A4822FB00F21DD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB56EB9A1A4822FB00F21DD9 /* 表情键盘 */;
+			targetProxy = CB56EBC11A4822FB00F21DD9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CB56EBA71A4822FB00F21DD9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB56EBA81A4822FB00F21DD9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CB56EBC61A4822FB00F21DD9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB56EBC71A4822FB00F21DD9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB56EBCB1A4822FB00F21DD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CB56EBCC1A4822FB00F21DD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB56EBCE1A4822FB00F21DD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "表情键盘/表情键盘-Prefix.pch";
+				INFOPLIST_FILE = "表情键盘/表情键盘-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CB56EBCF1A4822FB00F21DD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "表情键盘/表情键盘-Prefix.pch";
+				INFOPLIST_FILE = "表情键盘/表情键盘-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CB56EBD11A4822FB00F21DD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/表情键盘.app/表情键盘";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "表情键盘/表情键盘-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "表情键盘Tests/表情键盘Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		CB56EBD21A4822FB00F21DD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/表情键盘.app/表情键盘";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "表情键盘/表情键盘-Prefix.pch";
+				INFOPLIST_FILE = "表情键盘Tests/表情键盘Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB56EB961A4822FB00F21DD9 /* Build configuration list for PBXProject "表情键盘" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB56EBCB1A4822FB00F21DD9 /* Debug */,
+				CB56EBCC1A4822FB00F21DD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB56EBCD1A4822FB00F21DD9 /* Build configuration list for PBXNativeTarget "表情键盘" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB56EBCE1A4822FB00F21DD9 /* Debug */,
+				CB56EBCF1A4822FB00F21DD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CB56EBD01A4822FB00F21DD9 /* Build configuration list for PBXNativeTarget "表情键盘Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB56EBD11A4822FB00F21DD9 /* Debug */,
+				CB56EBD21A4822FB00F21DD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CB56EB931A4822FB00F21DD9 /* Project object */;
+}
