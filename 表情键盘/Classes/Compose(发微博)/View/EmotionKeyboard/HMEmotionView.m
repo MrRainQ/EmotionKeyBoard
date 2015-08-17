@@ -36,13 +36,21 @@
             [UIView setAnimationsEnabled:YES];
         });
     } else { // 图片表情
-        NSString *icon = [NSString stringWithFormat:@"%@/%@", emotion.directory, emotion.png];
-        UIImage *image = [UIImage imageWithName:icon];
-        if (iOS7) { // 不需要进行蓝色的渲染
-            image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        
+        if (emotion.png.length > 0) {
+            
+            NSString *icon = [NSString stringWithFormat:@"%@/%@", emotion.directory, emotion.png];
+            UIImage *image = [UIImage imageWithName:icon];
+            if (iOS7) { // 不需要进行蓝色的渲染
+                image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            }
+            [self setImage:image forState:UIControlStateNormal];
+            [self setTitle:nil forState:UIControlStateNormal];
+        }else{
+            [self setImage:nil forState:UIControlStateNormal];
+            [self setTitle:emotion.chs forState:UIControlStateNormal];
+            [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         }
-        [self setImage:image forState:UIControlStateNormal];
-        [self setTitle:nil forState:UIControlStateNormal];
     }
 }
 

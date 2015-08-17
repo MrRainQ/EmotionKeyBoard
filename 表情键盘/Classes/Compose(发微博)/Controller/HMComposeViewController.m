@@ -5,10 +5,11 @@
 #import "HMComposePhotosView.h"
 #import "HMEmotion.h"
 #import "HMEmotionKeyboard.h"
+#import "RQCommentToolBar.h"
 
-@interface HMComposeViewController () <HMComposeToolbarDelegate, UITextViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface HMComposeViewController () <HMComposeToolbarDelegate, UITextViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate,RQCommentToolBarDelegate>
 @property (nonatomic, weak) HMEmotionTextView *textView;
-@property (nonatomic, weak) HMComposeToolbar *toolbar;
+@property (nonatomic, weak) RQCommentToolBar *toolbar;
 @property (nonatomic, weak) HMComposePhotosView *photosView;
 @property (nonatomic, strong) HMEmotionKeyboard *kerboard;
 /**
@@ -34,10 +35,8 @@
 {
     [super viewDidLoad];
     
-    // 设置导航条内容
-    [self setupNavBar];
-    
-    // 添加输入控件
+    self.view.backgroundColor = [UIColor whiteColor];
+   // 添加输入控件
     [self setupTextView];
     
     // 添加工具条
@@ -67,7 +66,7 @@
 - (void)setupToolbar
 {
     // 1.创建
-    HMComposeToolbar *toolbar = [[HMComposeToolbar alloc] init];
+    RQCommentToolBar *toolbar = [[RQCommentToolBar alloc] init];
     toolbar.width = self.view.width;
     toolbar.delegate = self;
     toolbar.height = 44;
@@ -81,27 +80,21 @@
 // 添加输入控件
 - (void)setupTextView
 {
-    // 1.创建输入控件
-    HMEmotionTextView *textView = [[HMEmotionTextView alloc] init];
-    textView.alwaysBounceVertical = YES; // 垂直方向上拥有有弹簧效果
-    textView.frame = self.view.bounds;
-    textView.delegate = self;
-    [self.view addSubview:textView];
-    self.textView = textView;
-    
-    // 2.设置提醒文字（占位文字）
-    textView.placehoder = @"分享新鲜事...";
-    
-    // 3.设置字体
-    textView.font = [UIFont systemFontOfSize:15];
-    
-    // 4.监听键盘
     // 键盘的frame(位置)即将改变, 就会发出UIKeyboardWillChangeFrameNotification
     // 键盘即将弹出, 就会发出UIKeyboardWillShowNotification
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     // 键盘即将隐藏, 就会发出UIKeyboardWillHideNotification
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 }
+
+/**
+ *  当textView的文字改变就会调用
+ */
+- (void)textViewDidChange:(UITextView *)textView
+{
+
+}
+
 
 - (void)dealloc
 {
@@ -117,92 +110,6 @@
     
     // 成为第一响应者（叫出键盘）
     [self.textView becomeFirstResponder];
-}
-
-// 设置导航条内容
-- (void)setupNavBar
-{
-
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStyleBordered target:self action:@selector(cancel)];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"发送" style:UIBarButtonItemStyleBordered target:self action:@selector(send)];
-    self.navigationItem.rightBarButtonItem.enabled = NO;
-}
-
-#pragma mark - 私有方法
-/**
- *  取消
- */
-- (void)cancel
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-/**
- *  发送
- */
-- (void)send
-{
-    // 1.发表微博
-    if (self.photosView.images.count) {
-        [self sendStatusWithImage];
-    } else {
-        [self sendStatusWithoutImage];
-    }
-    
-    // 2.关闭控制器
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-/**
- *  发表有图片的微博
- */
-- (void)sendStatusWithImage
-{
-//    // 1.获得请求管理者
-//    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
-//    
-//    // 2.封装请求参数
-//    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-//    params[@"access_token"] = [HMAccountTool account].access_token;
-//    params[@"status"] = self.textView.text;
-//    
-//    // 3.发送POST请求
-//    [mgr POST:@"https://upload.api.weibo.com/2/statuses/upload.json" parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-//        
-//#warning 目前新浪开放的发微博接口 最多 只能上传一张图片
-//        UIImage *image = [self.photosView.images firstObject];
-//        
-//        NSData *data = UIImageJPEGRepresentation(image, 1.0);
-//        
-//        // 拼接文件参数
-//        [formData appendPartWithFileData:data name:@"pic" fileName:@"status.jpg" mimeType:@"image/jpeg"];
-//        
-//    } success:^(AFHTTPRequestOperation *operation, NSDictionary *statusDict) {
-//        [MBProgressHUD showSuccess:@"发表成功"];
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        [MBProgressHUD showError:@"发表失败"];
-//    }];
-}
-
-
-// 图文混排 ： 图片和文字混合在一起排列
-
-/**
- *  发表没有图片的微博
- */
-- (void)sendStatusWithoutImage
-{
-    // 1.封装请求参数
-//    HMSendStatusParam *param = [HMSendStatusParam param];
-//    param.status = self.textView.realText;
-//    
-//    // 2.发微博
-//    [HMStatusTool sendStatusWithParam:param success:^(HMSendStatusResult *result) {
-//        [MBProgressHUD showSuccess:@"发表成功"];
-//    } failure:^(NSError *error) {
-//        [MBProgressHUD showError:@"发表失败"];
-//    }];
 }
 
 #pragma mark - 键盘处理
@@ -248,14 +155,6 @@
     [self.view endEditing:YES];
 }
 
-/**
- *  当textView的文字改变就会调用
- */
-- (void)textViewDidChange:(UITextView *)textView
-{
-    self.navigationItem.rightBarButtonItem.enabled = textView.hasText;
-}
-
 #pragma mark - HMComposeToolbarDelegate
 /**
  *  监听toolbar内部按钮的点击
@@ -264,46 +163,15 @@
 {
     switch (buttonType) {
         case HMComposeToolbarButtonTypeCamera: // 照相机
-            [self openCamera];
             break;
-            
         case HMComposeToolbarButtonTypePicture: // 相册
-            [self openAlbum];
             break;
-            
         case HMComposeToolbarButtonTypeEmotion: // 表情
             [self openEmotion];
             break;
-            
         default:
             break;
     }
-}
-
-/**
- *  打开照相机
- */
-- (void)openCamera
-{
-    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) return;
-    
-    UIImagePickerController *ipc = [[UIImagePickerController alloc] init];
-    ipc.sourceType = UIImagePickerControllerSourceTypeCamera;
-    ipc.delegate = self;
-    [self presentViewController:ipc animated:YES completion:nil];
-}
-
-/**
- *  打开相册
- */
-- (void)openAlbum
-{
-    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) return;
-    
-    UIImagePickerController *ipc = [[UIImagePickerController alloc] init];
-    ipc.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    ipc.delegate = self;
-    [self presentViewController:ipc animated:YES completion:nil];
 }
 
 /**
@@ -339,40 +207,34 @@
     });
 }
 
-/**
- *  当表情选中的时候调用
- *
- *  @param note 里面包含了选中的表情
- */
-- (void)emotionDidSelected:(NSNotification *)note
-{
-    HMEmotion *emotion = note.userInfo[HMSelectedEmotion];
-    
-    // 1.拼接表情
-    [self.textView appendEmotion:emotion];
-    
-    // 2.检测文字长度
-    [self textViewDidChange:self.textView];
-}
+///**
+// *  当表情选中的时候调用
+// *
+// *  @param note 里面包含了选中的表情
+// */
+//- (void)emotionDidSelected:(NSNotification *)note
+//{
+//    HMEmotion *emotion = note.userInfo[HMSelectedEmotion];
+//    
+//    // 1.拼接表情
+//    [self.textView appendEmotion:emotion];
+//    
+//    // 2.检测文字长度
+//    [self textViewDidChange:self.textView];
+//}
+//
+///**
+// *  当点击表情键盘上的删除按钮时调用
+// */
+//- (void)emotionDidDeleted:(NSNotification *)note
+//{
+//    // 往回删
+//    [self.textView deleteBackward];
+//}
 
-/**
- *  当点击表情键盘上的删除按钮时调用
- */
-- (void)emotionDidDeleted:(NSNotification *)note
+- (void)commentTool:(RQCommentToolBar *)toolbar didClickedButton:(RQCommentToolbarButtonType)buttonType
 {
-    // 往回删
-    [self.textView deleteBackward];
-}
 
-#pragma mark - UIImagePickerControllerDelegate
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
-{
-    [picker dismissViewControllerAnimated:YES completion:nil];
-    
-    // 1.取出选中的图片
-    UIImage *image = info[UIImagePickerControllerOriginalImage];
-    
-    // 2.添加图片到相册中
-    [self.photosView addImage:image];
+    [self openEmotion];
 }
 @end

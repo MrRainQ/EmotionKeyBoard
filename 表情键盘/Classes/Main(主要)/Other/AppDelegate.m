@@ -8,7 +8,9 @@
 
 #import "AppDelegate.h"
 
-#import "HMMMMViewController.h"
+#import "HMComposeViewController.h"
+#import "RQEditPostController.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -20,9 +22,10 @@
     // 2.显示窗口(成为主窗口)
     [self.window makeKeyAndVisible];
     
+    self.window.backgroundColor = [UIColor whiteColor];
     // 3.设置窗口的根控制器
-    HMMMMViewController *hmm = [[HMMMMViewController alloc]init];
-    
+    RQEditPostController *hmm = [[RQEditPostController alloc]init];
+//    UINavigationController *nav =[[UINavigationController alloc]initWithRootViewController:hmm];
     self.window.rootViewController = hmm;
 
     return YES;

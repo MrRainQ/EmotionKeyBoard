@@ -23,7 +23,7 @@
 {
     [super layoutSubviews];
     
-    int count = self.subviews.count;
+    int count = (int)self.subviews.count;
     // 一行的最大列数
     int maxColsPerRow = 4;
     

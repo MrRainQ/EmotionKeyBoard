@@ -9,24 +9,17 @@
 #import "HMEmotionGridView.h"
 #import "HMEmotion.h"
 #import "HMEmotionView.h"
-#import "HMEmotionPopView.h"
 #import "HMEmotionTool.h"
 
 @interface HMEmotionGridView()
 @property (nonatomic, weak) UIButton *deleteButton;
 @property (nonatomic, strong) NSMutableArray *emotionViews;
-@property (nonatomic, strong) HMEmotionPopView *popView;
+@property (nonatomic, assign) int emotionMaxCountPerPage;
+@property (nonatomic, assign) int emotionMaxCols;
+
 @end
 
 @implementation HMEmotionGridView
-
-- (HMEmotionPopView *)popView
-{
-    if (!_popView) {
-        self.popView = [HMEmotionPopView popView];
-    }
-    return _popView;
-}
 
 - (NSMutableArray *)emotionViews
 {
@@ -47,11 +40,6 @@
         [deleteButton addTarget:self action:@selector(deleteClick) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:deleteButton];
         self.deleteButton = deleteButton;
-        
-        // 给自己添加一个长按手势识别器
-        UILongPressGestureRecognizer *recognizer = [[UILongPressGestureRecognizer alloc] init];
-        [recognizer addTarget:self action:@selector(longPress:)];
-        [self addGestureRecognizer:recognizer];
     }
     return self;
 }
@@ -72,42 +60,19 @@
     return foundEmotionView;
 }
 
-/**
- *  触发了长按手势
- */
-- (void)longPress:(UILongPressGestureRecognizer *)recognizer
-{
-    // 1.捕获触摸点
-    CGPoint point = [recognizer locationInView:recognizer.view];
-    
-    // 2.检测触摸点落在哪个表情上
-    HMEmotionView *emotionView = [self emotionViewWithPoint:point];
-    
-    if (recognizer.state == UIGestureRecognizerStateEnded) { // 手松开了
-        // 移除表情弹出控件
-        [self.popView dismiss];
-        
-        // 选中表情
-        [self selecteEmotion:emotionView.emotion];
-    } else { // 手没有松开
-        // 显示表情弹出控件
-        [self.popView showFromEmotionView:emotionView];
-    }
-}
 
 - (void)setEmotions:(NSArray *)emotions
 {
     _emotions = emotions;
     
     // 添加新的表情
-    int count = emotions.count;
-    int currentEmotionViewCount = self.emotionViews.count;
+    int count = (int)emotions.count;
+    int currentEmotionViewCount = (int)self.emotionViews.count;
     for (int i = 0; i<count; i++) {
         HMEmotionView *emotionView = nil;
         
         if (i >= currentEmotionViewCount) { // emotionView不够用
             emotionView = [[HMEmotionView alloc] init];
-//            emotionView.backgroundColor = HMRandomColor;
             [emotionView addTarget:self action:@selector(emotionClick:) forControlEvents:UIControlEventTouchUpInside];
             [self addSubview:emotionView];
             [self.emotionViews addObject:emotionView];
@@ -124,6 +89,9 @@
         UIButton *emotionView = self.emotionViews[i];
         emotionView.hidden = YES;
     }
+    
+    // 重新布局子控件
+    [self setNeedsLayout];
 }
 
 /**
@@ -131,13 +99,23 @@
  */
 - (void)emotionClick:(HMEmotionView *)emotionView
 {
-    [self.popView showFromEmotionView:emotionView];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.popView dismiss];
         
         // 选中表情
         [self selecteEmotion:emotionView.emotion];
     });
+}
+
+- (void)setIsEmotion:(BOOL)isEmotion
+{
+    _isEmotion = isEmotion;
+    
+    if (_isEmotion) { // 是表情
+        _emotionMaxCols = 7;
+    }else{
+        _emotionMaxCols = 3;
+    }
+    _emotionMaxCountPerPage = (HMEmotionMaxRows * _emotionMaxCols - 1);
 }
 
 /**
@@ -145,11 +123,7 @@
  */
 - (void)selecteEmotion:(HMEmotion *)emotion
 {
-    if (emotion == nil) return;
-//#warning 注意：先添加使用的表情，再发通知
-    // 保存使用记录
-    [HMEmotionTool addRecentEmotion:emotion];
-    
+    if (emotion == nil) return;    
     // 发出一个选中表情的通知
     [[NSNotificationCenter defaultCenter] postNotificationName:HMEmotionDidSelectedNotification object:nil userInfo:@{HMSelectedEmotion : emotion}];
 }
@@ -171,13 +145,14 @@
     CGFloat topInset = 15;
     
     // 1.排列所有的表情
-    int count = self.emotionViews.count;
-    CGFloat emotionViewW = (self.width - 2 * leftInset) / HMEmotionMaxCols;
+    int count = (int)self.emotionViews.count;
+    CGFloat emotionViewW = (self.width - 2 * leftInset) / _emotionMaxCols;
+
     CGFloat emotionViewH = (self.height - topInset) / HMEmotionMaxRows;
     for (int i = 0; i<count; i++) {
         UIButton *emotionView = self.emotionViews[i];
-        emotionView.x = leftInset + (i % HMEmotionMaxCols) * emotionViewW;
-        emotionView.y = topInset + (i / HMEmotionMaxCols) * emotionViewH;
+        emotionView.x = leftInset + (i % _emotionMaxCols) * emotionViewW;
+        emotionView.y = topInset + (i / _emotionMaxCols) * emotionViewH;
         emotionView.width = emotionViewW;
         emotionView.height = emotionViewH;
     }

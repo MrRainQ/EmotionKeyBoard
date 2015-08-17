@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年  . All rights reserved.
 //
 
-#define HMEmotionToolbarButtonMaxCount 4
+#define HMEmotionToolbarButtonMaxCount 2
 
 #import "HMEmotionToolbar.h"
 
@@ -22,30 +22,10 @@
     self = [super initWithFrame:frame];
     if (self) {
         // 1.添加4个按钮
-        [self setupButton:@"最近" tag:HMEmotionTypeRecent];
         [self setupButton:@"默认" tag:HMEmotionTypeDefault];
-        [self setupButton:@"Emoji" tag:HMEmotionTypeEmoji];
-        [self setupButton:@"浪小花" tag:HMEmotionTypeLxh];
-        
-        // 2.监听表情选中的通知
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(emotionDidSelected:) name:HMEmotionDidSelectedNotification object:nil];
+        [self setupButton:@"颜文字" tag:HMEmotionTypeLxh];
     }
     return self;
-}
-
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-/**
- *  表情选中
- */
-- (void)emotionDidSelected:(NSNotification *)note
-{
-    if (self.selectedButton.tag == HMEmotionTypeRecent) {
-        [self buttonClick:self.selectedButton];
-    }
 }
 
 /**
@@ -69,7 +49,7 @@
     [self addSubview:button];
     
     // 设置背景图片
-    int count = self.subviews.count;
+    int count = (int)self.subviews.count;
     if (count == 1) { // 第一个按钮
         [button setBackgroundImage:[UIImage resizedImage:@"compose_emotion_table_left_normal"] forState:UIControlStateNormal];
         [button setBackgroundImage:[UIImage resizedImage:@"compose_emotion_table_left_selected"] forState:UIControlStateSelected];

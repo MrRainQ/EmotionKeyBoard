@@ -10,9 +10,7 @@
 @class HMEmotionToolbar;
 
 typedef enum {
-    HMEmotionTypeRecent, // 最近
-    HMEmotionTypeDefault, // 默认
-    HMEmotionTypeEmoji, // Emoji
+    HMEmotionTypeDefault = 1, // 默认
     HMEmotionTypeLxh // 浪小花
 } HMEmotionType;
 

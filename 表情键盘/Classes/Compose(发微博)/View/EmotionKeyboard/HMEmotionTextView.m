@@ -14,8 +14,8 @@
 
 - (void)appendEmotion:(HMEmotion *)emotion
 {
-    if (emotion.emoji) { // emoji表情
-        [self insertText:emotion.emoji];
+    if (emotion.png.length == 0) { // emoji表情
+        [self insertText:emotion.chs];
     } else { // 图片表情
         NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithAttributedString:self.attributedText];
         
@@ -26,7 +26,7 @@
         NSAttributedString *attachString = [NSAttributedString attributedStringWithAttachment:attach];
         
         // 记录表情的插入位置
-        int insertIndex = self.selectedRange.location;
+        int insertIndex = (int)self.selectedRange.location;
         
         // 插入表情图片到光标位置
         [attributedText insertAttributedString:attachString atIndex:insertIndex];

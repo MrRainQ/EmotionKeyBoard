@@ -65,20 +65,14 @@
 {
     switch (emotionType) {
         case HMEmotionTypeDefault:// 默认
+            self.listView.isEmotion = YES;
             self.listView.emotions = [HMEmotionTool defaultEmotions];
             break;
-            
-        case HMEmotionTypeEmoji: // Emoji
-            self.listView.emotions = [HMEmotionTool emojiEmotions];
-            break;
-            
         case HMEmotionTypeLxh: // 浪小花
+            self.listView.isEmotion = NO;
             self.listView.emotions = [HMEmotionTool lxhEmotions];
             break;
-            
-        case HMEmotionTypeRecent: // 最近
-            self.listView.emotions = [HMEmotionTool recentEmotions];
-            break;
+        default:break;
     }
 }
 @end

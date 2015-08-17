@@ -11,4 +11,6 @@
 @interface HMEmotionListView : UIView
 /** 需要展示的所有表情 */
 @property (nonatomic, strong) NSArray *emotions;
+@property (nonatomic, assign ,getter = isEmojiEmotion) BOOL isEmotion;
+
 @end

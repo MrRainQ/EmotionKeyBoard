@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DE793661B79EEFB00D93984 /* RQCommentToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE793651B79EEFB00D93984 /* RQCommentToolBar.m */; };
+		1DE793691B79F1C700D93984 /* RQEditPostController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE793681B79F1C700D93984 /* RQEditPostController.m */; };
 		CB56EB9F1A4822FB00F21DD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB56EB9E1A4822FB00F21DD9 /* Foundation.framework */; };
 		CB56EBA11A4822FB00F21DD9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB56EBA01A4822FB00F21DD9 /* CoreGraphics.framework */; };
 		CB56EBA31A4822FB00F21DD9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB56EBA21A4822FB00F21DD9 /* UIKit.framework */; };
@@ -25,8 +27,6 @@
 		CB56EC281A4823AF00F21DD9 /* HMEmotionGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EBE91A4823AF00F21DD9 /* HMEmotionGridView.m */; };
 		CB56EC291A4823AF00F21DD9 /* HMEmotionKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EBEB1A4823AF00F21DD9 /* HMEmotionKeyboard.m */; };
 		CB56EC2A1A4823AF00F21DD9 /* HMEmotionListView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EBED1A4823AF00F21DD9 /* HMEmotionListView.m */; };
-		CB56EC2B1A4823AF00F21DD9 /* HMEmotionPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EBEF1A4823AF00F21DD9 /* HMEmotionPopView.m */; };
-		CB56EC2C1A4823AF00F21DD9 /* HMEmotionPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB56EBF01A4823AF00F21DD9 /* HMEmotionPopView.xib */; };
 		CB56EC2D1A4823AF00F21DD9 /* HMEmotionTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EBF21A4823AF00F21DD9 /* HMEmotionTextView.m */; };
 		CB56EC2E1A4823AF00F21DD9 /* HMEmotionToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EBF41A4823AF00F21DD9 /* HMEmotionToolbar.m */; };
 		CB56EC2F1A4823AF00F21DD9 /* HMEmotionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56EBF61A4823AF00F21DD9 /* HMEmotionView.m */; };
@@ -61,6 +61,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1DE793641B79EEFB00D93984 /* RQCommentToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RQCommentToolBar.h; sourceTree = "<group>"; };
+		1DE793651B79EEFB00D93984 /* RQCommentToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RQCommentToolBar.m; sourceTree = "<group>"; };
+		1DE793671B79F1C700D93984 /* RQEditPostController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RQEditPostController.h; sourceTree = "<group>"; };
+		1DE793681B79F1C700D93984 /* RQEditPostController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RQEditPostController.m; sourceTree = "<group>"; };
 		CB56EB9B1A4822FB00F21DD9 /* 表情键盘.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "表情键盘.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB56EB9E1A4822FB00F21DD9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CB56EBA01A4822FB00F21DD9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -89,9 +93,6 @@
 		CB56EBEB1A4823AF00F21DD9 /* HMEmotionKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMEmotionKeyboard.m; sourceTree = "<group>"; };
 		CB56EBEC1A4823AF00F21DD9 /* HMEmotionListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMEmotionListView.h; sourceTree = "<group>"; };
 		CB56EBED1A4823AF00F21DD9 /* HMEmotionListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMEmotionListView.m; sourceTree = "<group>"; };
-		CB56EBEE1A4823AF00F21DD9 /* HMEmotionPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMEmotionPopView.h; sourceTree = "<group>"; };
-		CB56EBEF1A4823AF00F21DD9 /* HMEmotionPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMEmotionPopView.m; sourceTree = "<group>"; };
-		CB56EBF01A4823AF00F21DD9 /* HMEmotionPopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMEmotionPopView.xib; sourceTree = "<group>"; };
 		CB56EBF11A4823AF00F21DD9 /* HMEmotionTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMEmotionTextView.h; sourceTree = "<group>"; };
 		CB56EBF21A4823AF00F21DD9 /* HMEmotionTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMEmotionTextView.m; sourceTree = "<group>"; };
 		CB56EBF31A4823AF00F21DD9 /* HMEmotionToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMEmotionToolbar.h; sourceTree = "<group>"; };
@@ -287,6 +288,8 @@
 				CB56EBF81A4823AF00F21DD9 /* HMComposePhotosView.m */,
 				CB56EBF91A4823AF00F21DD9 /* HMComposeToolbar.h */,
 				CB56EBFA1A4823AF00F21DD9 /* HMComposeToolbar.m */,
+				1DE793641B79EEFB00D93984 /* RQCommentToolBar.h */,
+				1DE793651B79EEFB00D93984 /* RQCommentToolBar.m */,
 				CB56EBFB1A4823AF00F21DD9 /* HMTextView.h */,
 				CB56EBFC1A4823AF00F21DD9 /* HMTextView.m */,
 			);
@@ -302,9 +305,6 @@
 				CB56EBEB1A4823AF00F21DD9 /* HMEmotionKeyboard.m */,
 				CB56EBEC1A4823AF00F21DD9 /* HMEmotionListView.h */,
 				CB56EBED1A4823AF00F21DD9 /* HMEmotionListView.m */,
-				CB56EBEE1A4823AF00F21DD9 /* HMEmotionPopView.h */,
-				CB56EBEF1A4823AF00F21DD9 /* HMEmotionPopView.m */,
-				CB56EBF01A4823AF00F21DD9 /* HMEmotionPopView.xib */,
 				CB56EBF11A4823AF00F21DD9 /* HMEmotionTextView.h */,
 				CB56EBF21A4823AF00F21DD9 /* HMEmotionTextView.m */,
 				CB56EBF31A4823AF00F21DD9 /* HMEmotionToolbar.h */,
@@ -318,6 +318,8 @@
 		CB56EBFD1A4823AF00F21DD9 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				1DE793671B79F1C700D93984 /* RQEditPostController.h */,
+				1DE793681B79F1C700D93984 /* RQEditPostController.m */,
 				CB56EBFE1A4823AF00F21DD9 /* Category */,
 				CB56EC051A4823AF00F21DD9 /* HMMMMViewController.h */,
 				CB56EC061A4823AF00F21DD9 /* HMMMMViewController.m */,
@@ -464,7 +466,6 @@
 				CB56EBD61A48232F00F21DD9 /* EmotionIcons in Resources */,
 				CB56EBB71A4822FB00F21DD9 /* Images.xcassets in Resources */,
 				CB56EBA91A4822FB00F21DD9 /* InfoPlist.strings in Resources */,
-				CB56EC2C1A4823AF00F21DD9 /* HMEmotionPopView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +486,7 @@
 			files = (
 				CB56EC361A4823AF00F21DD9 /* HMMMMViewController.m in Sources */,
 				CB56EC381A4823AF00F21DD9 /* MJArgument.m in Sources */,
+				1DE793691B79F1C700D93984 /* RQEditPostController.m in Sources */,
 				CB56EC351A4823AF00F21DD9 /* UIView+Extension.m in Sources */,
 				CB56EC241A4823AF00F21DD9 /* HMComposeViewController.m in Sources */,
 				CB56EC411A4823AF00F21DD9 /* AppDelegate.m in Sources */,
@@ -502,12 +504,12 @@
 				CB56EC281A4823AF00F21DD9 /* HMEmotionGridView.m in Sources */,
 				CB56EC2E1A4823AF00F21DD9 /* HMEmotionToolbar.m in Sources */,
 				CB56EC2D1A4823AF00F21DD9 /* HMEmotionTextView.m in Sources */,
-				CB56EC2B1A4823AF00F21DD9 /* HMEmotionPopView.m in Sources */,
 				CB56EC291A4823AF00F21DD9 /* HMEmotionKeyboard.m in Sources */,
 				CB56EC401A4823AF00F21DD9 /* NSObject+MJMember.m in Sources */,
 				CB56EC3A1A4823AF00F21DD9 /* MJMember.m in Sources */,
 				CB56EC3E1A4823AF00F21DD9 /* NSObject+MJCoding.m in Sources */,
 				CB56EC2A1A4823AF00F21DD9 /* HMEmotionListView.m in Sources */,
+				1DE793661B79EEFB00D93984 /* RQCommentToolBar.m in Sources */,
 				CB56EC271A4823AF00F21DD9 /* HMEmotionTool.m in Sources */,
 				CB56EC251A4823AF00F21DD9 /* HMEmotion.m in Sources */,
 				CB56EC301A4823AF00F21DD9 /* HMComposePhotosView.m in Sources */,
@@ -708,6 +710,7 @@
 				CB56EBCF1A4822FB00F21DD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CB56EBD01A4822FB00F21DD9 /* Build configuration list for PBXNativeTarget "表情键盘Tests" */ = {
 			isa = XCConfigurationList;
@@ -716,6 +719,7 @@
 				CB56EBD21A4822FB00F21DD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
